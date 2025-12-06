@@ -1,0 +1,22 @@
+includes:
+    - vendor/larastan/larastan/extension.neon
+
+parameters:
+    paths:
+        - app
+        - config
+        - database
+        - routes
+
+    # Nivel de estricticidad (0-9, donde 9 es el más estricto)
+    # Empezamos con nivel 6, puedes ir subiendo gradualmente
+    level: 6
+
+    ignoreErrors:
+        # Puedes añadir excepciones específicas aquí si es necesario
+
+    excludePaths:
+        - app/Http/Middleware/*
+        - bootstrap/*
+        - storage/*
+        - vendor/*

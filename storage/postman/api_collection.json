@@ -1,0 +1,326 @@
+{
+    "info": {
+        "name": "Artemis Hex",
+        "description": "API Documentation",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "v1",
+            "item": [
+                {
+                    "name": "applications",
+                    "item": [
+                        {
+                            "name": "[POST] api/v1/applications",
+                            "request": {
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/json",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json",
+                                        "type": "text"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{base_url}}/api/v1/applications",
+                                    "host": [
+                                        "{{base_url}}"
+                                    ],
+                                    "path": [
+                                        "api",
+                                        "v1",
+                                        "applications"
+                                    ]
+                                },
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"candidate_name\": \"sample_text\",\n    \"candidate_email\": \"user25@example.com\",\n    \"position\": \"sample_text\",\n    \"years_of_experience\": 43,\n    \"cv_path\": \"sample_text\",\n    \"cover_letter\": \"sample_text\"\n}",
+                                    "options": []
+                                }
+                            }
+                        },
+                        {
+                            "name": "",
+                            "item": [
+                                {
+                                    "name": "validate",
+                                    "item": [
+                                        {
+                                            "name": "[POST] api/v1/applications/{id}/validate",
+                                            "request": {
+                                                "method": "POST",
+                                                "header": [
+                                                    {
+                                                        "key": "Accept",
+                                                        "value": "application/json",
+                                                        "type": "text"
+                                                    },
+                                                    {
+                                                        "key": "Content-Type",
+                                                        "value": "application/json",
+                                                        "type": "text"
+                                                    }
+                                                ],
+                                                "url": {
+                                                    "raw": "{{base_url}}/api/v1/applications/{id}/validate",
+                                                    "host": [
+                                                        "{{base_url}}"
+                                                    ],
+                                                    "path": [
+                                                        "api",
+                                                        "v1",
+                                                        "applications",
+                                                        "{id}",
+                                                        "validate"
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "assign-evaluator",
+                                    "item": [
+                                        {
+                                            "name": "[POST] api/v1/applications/{id}/assign-evaluator",
+                                            "request": {
+                                                "method": "POST",
+                                                "header": [
+                                                    {
+                                                        "key": "Accept",
+                                                        "value": "application/json",
+                                                        "type": "text"
+                                                    },
+                                                    {
+                                                        "key": "Content-Type",
+                                                        "value": "application/json",
+                                                        "type": "text"
+                                                    }
+                                                ],
+                                                "url": {
+                                                    "raw": "{{base_url}}/api/v1/applications/{id}/assign-evaluator",
+                                                    "host": [
+                                                        "{{base_url}}"
+                                                    ],
+                                                    "path": [
+                                                        "api",
+                                                        "v1",
+                                                        "applications",
+                                                        "{id}",
+                                                        "assign-evaluator"
+                                                    ]
+                                                },
+                                                "body": {
+                                                    "mode": "raw",
+                                                    "raw": "{\n    \"evaluator_id\": 4\n}",
+                                                    "options": []
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "summary",
+                                    "item": [
+                                        {
+                                            "name": "[GET] api/v1/applications/{id}/summary",
+                                            "request": {
+                                                "method": "GET",
+                                                "header": [
+                                                    {
+                                                        "key": "Accept",
+                                                        "value": "application/json",
+                                                        "type": "text"
+                                                    },
+                                                    {
+                                                        "key": "Content-Type",
+                                                        "value": "application/json",
+                                                        "type": "text"
+                                                    }
+                                                ],
+                                                "url": {
+                                                    "raw": "{{base_url}}/api/v1/applications/{id}/summary",
+                                                    "host": [
+                                                        "{{base_url}}"
+                                                    ],
+                                                    "path": [
+                                                        "api",
+                                                        "v1",
+                                                        "applications",
+                                                        "{id}",
+                                                        "summary"
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "consolidated",
+                            "item": [
+                                {
+                                    "name": "[GET] api/v1/applications/consolidated",
+                                    "request": {
+                                        "method": "GET",
+                                        "header": [
+                                            {
+                                                "key": "Accept",
+                                                "value": "application/json",
+                                                "type": "text"
+                                            },
+                                            {
+                                                "key": "Content-Type",
+                                                "value": "application/json",
+                                                "type": "text"
+                                            }
+                                        ],
+                                        "url": {
+                                            "raw": "{{base_url}}/api/v1/applications/consolidated",
+                                            "host": [
+                                                "{{base_url}}"
+                                            ],
+                                            "path": [
+                                                "api",
+                                                "v1",
+                                                "applications",
+                                                "consolidated"
+                                            ]
+                                        },
+                                        "body": {
+                                            "mode": "raw",
+                                            "raw": "{\n    \"page\": 8,\n    \"per_page\": 95,\n    \"order_by\": \"sample_text\",\n    \"order_direction\": \"sample_text\",\n    \"filter_evaluator_id\": 9,\n    \"filter_min_experience\": 6,\n    \"filter_max_experience\": 4\n}",
+                                            "options": []
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "evaluators",
+                    "item": [
+                        {
+                            "name": "[GET] api/v1/evaluators",
+                            "request": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/json",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json",
+                                        "type": "text"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{base_url}}/api/v1/evaluators",
+                                    "host": [
+                                        "{{base_url}}"
+                                    ],
+                                    "path": [
+                                        "api",
+                                        "v1",
+                                        "evaluators"
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "name": "[GET] api/v1/evaluators/{id}",
+                            "request": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/json",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json",
+                                        "type": "text"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{base_url}}/api/v1/evaluators/{id}",
+                                    "host": [
+                                        "{{base_url}}"
+                                    ],
+                                    "path": [
+                                        "api",
+                                        "v1",
+                                        "evaluators",
+                                        "{id}"
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "reports",
+                    "item": [
+                        {
+                            "name": "excel",
+                            "item": [
+                                {
+                                    "name": "[POST] api/v1/reports/excel",
+                                    "request": {
+                                        "method": "POST",
+                                        "header": [
+                                            {
+                                                "key": "Accept",
+                                                "value": "application/json",
+                                                "type": "text"
+                                            },
+                                            {
+                                                "key": "Content-Type",
+                                                "value": "application/json",
+                                                "type": "text"
+                                            }
+                                        ],
+                                        "url": {
+                                            "raw": "{{base_url}}/api/v1/reports/excel",
+                                            "host": [
+                                                "{{base_url}}"
+                                            ],
+                                            "path": [
+                                                "api",
+                                                "v1",
+                                                "reports",
+                                                "excel"
+                                            ]
+                                        },
+                                        "body": {
+                                            "mode": "raw",
+                                            "raw": "{\n    \"page\": 7,\n    \"per_page\": 31,\n    \"order_by\": \"sample_text\",\n    \"order_direction\": \"sample_text\",\n    \"filter_evaluator_id\": 0,\n    \"filter_min_experience\": 4,\n    \"filter_max_experience\": 3\n}",
+                                            "options": []
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "variable": [
+        {
+            "key": "base_url",
+            "value": "http://localhost:8000"
+        }
+    ]
+}
