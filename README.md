@@ -838,7 +838,6 @@ Response: 202 Accepted
 
 ## Autor
 
-**Desafío Técnico - Backend Senior**
+**Alex Ibarz Rodrigo** 
 
 Desarrollado con ❤️ desde Zaragoza usando Laravel 12 y Arquitectura Hexagonal.
-
